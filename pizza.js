@@ -1,35 +1,74 @@
-//funcion InputDeviceInfo, solo se puede ejecutar esta
-function star() {
-    const flour = "Harina de trigo 160grs";
-    const salt = "1 cucharadita de sal  fina";
-    const water = "100ml agua";
-    const oil = "1 cucharada de Aceite de oliva";
-    const yeast = "7 gramos levadura fresca";
+function hacerMasa() {
+    const harina = 160;
+    const agua = 100;
+    const sal = 1;
+    const aceite = 1;
+    const levaduraFresca = 7; 
+  
+    console.log("\nAmasado...\n");
 
-    const ingredients = ["Tomate triturado", "Queso Mozarella fior di latte", "Atun", "Cebolla", "Olivas", "Pimiento rojo", "Oregano", "Pimienta"];
-    let olivesQuantity = 10;
-    let slicesPepperQuantity = 8;
-    let bakeTime = 10;
-    let pizzaDelivered = "Pizza Entregada"; 
-    
-    //MASA
-    console.log('Mezcla: ' + flour + ' con ' + yeast);
-    console.log('luego añadimos ' + water + ' y ' + salt);
-    console.log('y para terminar la masa ' + oil);
+  const mezcla = `Mezcla ${harina} g de harina de trigo con ${agua} ml de agua templada.`;
+  const salAceite = `\nAñade ${sal} cucharadita de sal fina y ${aceite} cucharada de aceite de oliva virgen extra,`;
+  const levadura = `\n${levaduraFresca} g de levadura seca de panadería o fresca (un cuarto de paquete) y añádela a la mezcla.`;
+  const amasado = "\nAmasa durante 10 minutos hasta que esté suave y elástica.";
+  const reposado = "\nDeja reposar la masa durante 30 minutos para que fermente.\n";
 
-    //REPOSO MASA
-    console.log('\nDejamos reposar 45 minutos');
-
-    //INGREDIENTES
-    console.log('\nLuego del reposo la estiramos ');
-    console.log('\nañadimos ' + ingredients[0]  + '\n' + ingredients[1] + '\n' + ingredients[2] + '\n' + ingredients[3] + '\n' + ingredients[4] + ' ' + olivesQuantity + '(cantidad)\n' + ingredients[5] + ' ' + slicesPepperQuantity + '(cantidad)\n' + ingredients[6] + '\n' + ingredients[7] + '\n');
-
-    //ESPERA
-    console.log('Tiempo de conccion ' + bakeTime);
-
-    //ENTREGA
-    console.log(pizzaDelivered);
-    
+  return `${mezcla} ${salAceite} ${levadura} ${amasado} ${reposado}`;
 }
-star()
 
+const instruccionesMasa = hacerMasa();
+console.log(instruccionesMasa);
+  
+
+function anadirIngredientes() {
+    const tomate = "triturado";
+    const queso = "mozzarella fior di latte";
+    const atun = true;
+    const cebolla = true;
+    const olivas = 10;
+    const pimiento = 8;
+    const oregano = true;
+    const pimienta = true;
+  
+    console.log("Añadiendo los ingredientes...\n");
+
+  console.log("Extiende la masa sobre una bandeja para horno.");
+  console.log(`Cubre la masa con ${tomate}.`);
+  console.log(`Añade ${queso} al gusto.`);
+
+  if (atun) {
+    console.log("Añade el atún al gusto.");
+  }
+
+  if (cebolla) {
+    console.log("Añade la cebolla al gusto.");
+  }
+
+  console.log(`Añade ${olivas} olivas.`);
+
+  if (pimiento) {
+    console.log(`Añade ${pimiento} tiras de pimiento rojo.`);
+  }
+
+  console.log("Espolvorea orégano y pimienta al gusto.");
+}
+
+function hornearPizza() {
+    const temperatura = 220; 
+    const tiempo = 15;
+  
+    console.log("\nHorneando la pizza...\n");
+    console.log(`Precalienta el horno a ${temperatura} grados Celsius.`);
+    console.log("Introduce la pizza en el horno.");
+    console.log(`Hornea la pizza durante ${tiempo} minutos.`);
+    console.log("Saca la pizza del horno.");
+    console.log("Deja reposar la pizza durante unos minutos antes de servir.");
+  }
+  
+  function entregarPizza() {
+    console.log("\n¡Lista para entregar!");
+  }
+
+  anadirIngredientes();
+  hornearPizza();
+  entregarPizza();
